@@ -1,0 +1,293 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS (Estética Editorial Clean)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc; /* Fundo levemente off-white para conforto visual */
+    color: #111111; /* Preto profundo para alto contraste */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografia Baseada nos Títulos do Print (Caslon) */
+h1, h2, h3, h4 {
+    font-family: 'Big Shot', 'Lora', 'Georgia', serif; /* Fallback caso queira usar Caslon local */
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+/* Linha fina preta idêntica ao design da imagem */
+.linha-editorial {
+    width: 100%;
+    height: 1px;
+    background-color: #111111;
+    margin: 30px 0;
+}
+
+/* ==========================================================================
+   HEADER (CABEÇALHO)
+   ========================================================================== */
+.header-principal {
+    max-width: 1200px;
+    margin: 40px auto 10px auto;
+    text-align: center;
+}
+
+.meta-info {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555555;
+}
+
+.header-principal h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.subtitulo-principal {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #444444;
+    margin-top: 10px;
+}
+
+/* Navegação em Barra */
+.navegacao-principal {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.navegacao-principal a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    transition: opacity 0.2s;
+}
+
+.navegacao-principal a:hover, 
+.navegacao-principal a.active {
+    font-weight: 600;
+    border-bottom: 1.5px solid #111111;
+}
+
+/* ==========================================================================
+   LAYOUT E SEÇÕES (GRID RESPONSIVO)
+   ========================================================================== */
+.container-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero em formato de duas colunas assimétricas */
+.secao-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.secao-hero h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.paragrafo-destaque {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+.secao-hero p {
+    margin-bottom: 15px;
+    color: #333333;
+    font-size: 0.95rem;
+}
+
+/* Molduras de Imagens e Ilustrações */
+.moldura-imagem {
+    border: 1px solid #111111;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.moldura-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%); /* Mantém a estética monocromática do seu rascunho */
+    transition: filter 0.5s ease;
+}
+
+.moldura-imagem img:hover {
+    filter: grayscale(0%); /* Mostra cor ao passar o mouse, toque moderno */
+}
+
+.legenda-imagem {
+    display: block;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #555555;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+
+/* Grid de Três Colunas Inferior */
+.grid-tres-colunas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.card-editorial {
+    border-right: 1px solid #dddddd;
+    padding-right: 20px;
+}
+
+.card-editorial:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.numero-etapa {
+    display: block;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.card-editorial h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.card-editorial p {
+    font-size: 0.9rem;
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+.link-editorial {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.link-editorial:hover {
+    text-decoration: underline;
+}
+
+/* Seção do Player de Vídeo */
+.secao-video-central {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.secao-video-central h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.conteiner-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção clássica 16:9 */
+    height: 0;
+    border: 1px solid #111111;
+    margin-bottom: 15px;
+}
+
+.conteiner-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.rodape-editorial {
+    border-top: 1px solid #111111;
+    margin-top: 60px;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666666;
+    letter-spacing: 0.03em;
+}
+
+.container-rodape p {
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Responsividade Absoluta para Telas de Celular)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+
+    .header-principal h1 {
+        font-size: 2.8rem; /* Reduz tamanho do título no mobile para não quebrar linha */
+    }
+
+    .navegacao-principal {
+        flex-wrap: wrap; /* Ajusta links do menu se faltar espaço */
+        gap: 15px;
+    }
+
+    .secao-hero {
+        grid-template-columns: 1fr; /* Transforma as duas colunas em uma vertical */
+        gap: 25px;
+    }
+
+    .secao-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .grid-tres-colunas {
+        grid-template-columns: 1fr; /* Transforma as 3 colunas inferiores em blocos de leitura única */
+        gap: 30px;
+    }
+
+    .card-editorial {
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .card-editorial:last-child {
+        border-bottom: none;
+    }
+}
